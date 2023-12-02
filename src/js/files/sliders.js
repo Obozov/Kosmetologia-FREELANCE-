@@ -7,7 +7,8 @@
 // Підключаємо слайдер Swiper з node_modules
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
-import Swiper, { Navigation } from 'swiper';
+import Swiper from 'swiper';
+import { Navigation, Autoplay} from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -17,9 +18,9 @@ EffectFade, Lazy, Manipulation
 
 // Стилі Swiper
 // Базові стилі
-import "../../scss/base/swiper.scss";
+//import "../../scss/base/swiper.scss";
 // Повний набір стилів з scss/libs/swiper.scss
-// import "../../scss/libs/swiper.scss";
+import "../../scss/libs/swiper.scss";
 // Повний набір стилів з node_modules
 // import 'swiper/css';
 
@@ -32,19 +33,19 @@ function initSliders() {
 		new Swiper('.swiper', { // Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
-			modules: [Navigation],
+			modules: [Navigation,Autoplay],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
+			slidesPerView: 6,
+			spaceBetween: 50,
 			autoHeight: true,
 			speed: 800,
 
 			//touchRatio: 0,
 			//simulateTouch: false,
-			//loop: true,
+			loop: true,
 			//preloadImages: false,
-			//lazy: true,
+			lazy: true,
 
 			/*
 			// Ефекти
@@ -56,12 +57,8 @@ function initSliders() {
 			*/
 
 			// Пагінація
-			/*
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-			*/
+
+
 
 			// Скроллбар
 			/*
@@ -76,11 +73,14 @@ function initSliders() {
 				prevEl: '.swiper-button-prev',
 				nextEl: '.swiper-button-next',
 			},
-			/*
+		
 			// Брейкпоінти
 			breakpoints: {
-				640: {
+				320:{
 					slidesPerView: 1,
+				},
+				640: {
+					slidesPerView: 2,
 					spaceBetween: 0,
 					autoHeight: true,
 				},
@@ -89,15 +89,15 @@ function initSliders() {
 					spaceBetween: 20,
 				},
 				992: {
-					slidesPerView: 3,
+					slidesPerView: 4,
 					spaceBetween: 20,
 				},
 				1268: {
-					slidesPerView: 4,
+					slidesPerView: 5,
 					spaceBetween: 30,
 				},
 			},
-			*/
+			
 			// Події
 			on: {
 

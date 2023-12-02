@@ -15,64 +15,65 @@
 .menu__body {
 }
 .header__top {
-	display: flex;
-	justify-content: space-between;
+	display: grid;
+	grid-template: 1fr/50% 25% 25%;
 }
 .header__time {
-text-align: center;
+	
+	text-align: center;
 span{
 	color:#fd3b9a;
 }
 }
-.header__tel {
-	text-align: center;
+.header__btn {
 	display: flex;
 	align-items: center;
+}
+.header__btn-item {
+	padding: 15px;
 	font-size: 25px;
+	font-weight: bold;
+	background: #fd3b9a;
+	&:hover{
+		background: #fd3b99d4;
+	}
+}
+.header__contact{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+.header__tel {
+	text-align: center;
+	
+	font-size: 35px;
 	&:hover{
 		transition: .2s;
 		color: #fd3b9a;
 	}
 }
 .header__logo{
-	text-align: center;
-	padding: 5px;
-	background: #fff;
-	&:hover{
-		background: #ff9;
+	img{
+		width: 200px;
+		&:hover{
+			transition: .2s;
+			transform: scale(1.2);
+		}
+		&:not(:hover){
+			transition: .2s;
+		}
 	}
+	
 }
 .logo__block{
 
 }
-.logo__row1{
-	font-size: 17px;
-	letter-spacing: 3px;
-	color: rgba(44, 108, 205, 0.66);
-}
-.logo__row2{
-	font-size: 25px;
-	color: #0065FF;
-	font-weight: 700;
-	padding: 10px 0; 
 
-}
-.logo__row3{
-	color: #FD3B9A;
-	font-size: 17px;
 
-}
-.header__button {
-	background: #fd3b9a;
-	&:hover{
-		transition: .2s;
-		background: #fff;
-		color: #fd3b9a;
-	}
-}
 .header__bot {
 	text-transform: uppercase;
-
+	@include adaptiveValue("padding-left",300,0);
 }
 .menu__list {
 	padding: 25px 0;

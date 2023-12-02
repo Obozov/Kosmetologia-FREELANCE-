@@ -5,7 +5,8 @@
 .page{
 	
 }
-.first {
+.first__container {
+
 }
 .first__row{
 	display: flex;
@@ -20,6 +21,7 @@
 	flex-direction: column;
 }
 .first__title{
+	backdrop-filter: blur(5px);
 	line-height: 130%;
 	text-align: center;
 	text-transform: uppercase;
@@ -180,36 +182,41 @@
 
 //====================================================================================================
 .doctors {
-	padding: 100px 0;
+	padding: 80px 0;
 }
 .doctors__container {
+	background: #2d6fd167;
+	backdrop-filter: blur(5px)
 }
 .doctors__title {
+	padding-top: 20px;
 }
 
 .doctors__row {
 }
-.doc{
-	img{
-		width: 200px;
-	}
-}
+
 .doc {
 	.doc__navigation {
+		img{
+			width: 200px;
+		}
 		font-size: 25px;
 		display: flex;
+		flex-direction: row-reverse;
 		justify-content: space-evenly;
 	}
 	.doc__title {
+		text-transform: uppercase;
 		background: #2d6fd167;
 		border: 3px solid #eeeeee83;
-		padding: rem(10) rem(15);
+		padding:15px;
 		border-radius: rem(5);
 		display: flex;
-		flex-direction: column;
+		flex-direction: column-reverse;
+		justify-content: space-between;
 		align-items: center;
+		height: 450px;
 		&._tab-active {
-			border: 3px solid #000;
 		}
 	}
 	.doc__content {
@@ -222,11 +229,62 @@
 		background: #2d6ed1;
 	}
 }
-.d2{
-	text-align: right;
+.doc__body{
+	span{
+		color: #2d6ed1;
+	}
+	h2{
+		padding: 30px 0;
+		font-size: 25px;
+		font-weight: bold;
+	}
+	h3{
+		
+		padding: 10px 0;
+		font-size: 25px;
+	}
+	p{
+		font-size: 20px;
+	}
+	ul{
+		padding: 30px ;
+		font-size: 25px;
+		li{
+			list-style:decimal;
+			margin-left: 30px;
+			padding-top: 10px;
+			font-size: 20px;
+		}
+	}
+}
+.doc2__row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.doc2__photo {
+	padding-right: 10px;
+	padding-top: 10px;
+	img{
+		width: 150px;
+		height: 150px;
+	}
+	
 }
 //====================================================================================================
-
+.works{
+background: #2d6fd151;
+padding: 20px 0;
+margin-bottom: 150px;
+}
+.works__slider{
+	height: 300px;
+}
+.works__slide{
+	img{
+		padding: 20px;
+		max-height:  250px;
+	}
+}
 //====================================================================================================
 
 //====================================================================================================
