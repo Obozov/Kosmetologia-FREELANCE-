@@ -16,7 +16,7 @@
 }
 .header__top {
 	display: grid;
-	grid-template: 1fr/50% 25% 25%;
+	grid-template: 1fr/40% 20% 15% 25%;
 }
 .header__time {
 	
@@ -27,7 +27,7 @@ span{
 }
 .header__btn {
 	display: flex;
-	align-items: center;
+	align-items: start;
 }
 .header__btn-item {
 	padding: 15px;
@@ -69,6 +69,19 @@ span{
 .logo__block{
 
 }
+.header__links{
+	
+	display: flex;
+	align-items: start;
+	justify-content: space-evenly;
+	img{
+		width: 50px;
+		&:hover{
+			filter: brightness(90%)
+		}
+		
+		}
+	}
 
 
 .header__bot {

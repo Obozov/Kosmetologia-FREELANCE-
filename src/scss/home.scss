@@ -258,18 +258,17 @@
 	}
 }
 .doc2__row{
-	display: flex;
-	flex-wrap: wrap;
-}
-.doc2__photo {
-	padding-right: 10px;
-	padding-top: 10px;
+	position: relative;
+	//display: flex;
+	//flex-wrap: wrap;
 	img{
+		padding-right: 10px;
+		padding-top: 10px;
 		width: 150px;
 		height: 150px;
 	}
-	
 }
+
 //====================================================================================================
 .works{
 background: #2d6fd151;
