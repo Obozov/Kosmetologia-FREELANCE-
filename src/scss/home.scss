@@ -202,10 +202,12 @@
 		}
 		font-size: 25px;
 		display: flex;
-		flex-direction: row-reverse;
+		flex-direction: row;
 		justify-content: space-evenly;
 	}
 	.doc__title {
+		flex: 1 0 33%;
+
 		text-transform: uppercase;
 		background: #2d6fd167;
 		border: 3px solid #eeeeee83;
@@ -258,17 +260,26 @@
 	}
 }
 .doc2__row{
-	position: relative;
-	//display: flex;
-	//flex-wrap: wrap;
-	img{
+
+	 a{
+		img{
 		padding-right: 10px;
 		padding-top: 10px;
 		width: 150px;
 		height: 150px;
 	}
 }
+}
+.doc1__row{
 
+	img{
+		padding-right: 10px;
+		padding-top: 10px;
+		width: 150px;
+		height: 150px;
+		transform: rotate(-90deg);
+	}
+}
 //====================================================================================================
 .works{
 background: #2d6fd151;
@@ -286,6 +297,79 @@ margin-bottom: 150px;
 }
 //====================================================================================================
 
+
+.usluga {
+	padding-top: 100px;
+	padding-bottom: 300px;
+}
+.usluga__container {
+	backdrop-filter: blur(10px);
+
+}
+.usluga__title {
+font-size: 40px;
+}
+.usluga__mainBlock {
+	cursor: default;
+	padding: 50px;
+	background: #fd3b9937;
+	ol{
+		width: 100%;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		li{
+			text-align: left;
+			display: flex;
+			justify-content: space-between;
+			padding: 10px 5px ;
+			&:hover{
+				background: #fd3b9937;
+			}
+			&:has(ol){
+				background: #fd3b9937;
+
+			}
+		}
+		font-size: 30px;
+		ul{
+			width: 100%;
+			li{
+					
+					
+					padding-left: 20px;
+					&:last-child{
+						padding: 0;
+						padding-left: 20px;
+
+					}
+			}
+		
+		}
+		
+	}
+	
+}
+.usluga__doc{
+	padding-top: 50px;
+	display: flex;
+	justify-content: space-evenly;
+	img{
+		max-height: 500px;
+	}
+	.p123{
+		padding-top: 200px;
+		margin-left: -300px;
+	}
+	.m123{
+		padding-top: 300px;
+		margin-left: -300px;
+
+	}
+	.k12{
+		margin-left: 10px;
+	}
+}
 //====================================================================================================
 
 //====================================================================================================
