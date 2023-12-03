@@ -2,6 +2,9 @@
 .wrapper{
 	background-image: url("../img/bg.png");
 }
+button{
+	font-family: "Exo 2";
+}
 .page{
 	
 }
@@ -372,6 +375,47 @@ font-size: 40px;
 }
 //====================================================================================================
 
+.oNas {
+	padding-top: 50px;
+}
+.oNas__container {
+	backdrop-filter: blur(5px);
+
+}
+.oNas__title {
+padding-bottom: 250px;
+}
+.oNas__block {
+
+}
+.oNas__item {
+	padding: 25px 0;
+	margin: 0 auto;
+	max-width: 1000px;
+display: flex;
+justify-content: space-between;
+img{
+	width: 200px;
+	padding: 30px;
+	background: #2d6ed1;
+	border-radius: 30px;
+}
+h2{
+	font-size: 30px;
+	padding-bottom: 10px;
+}
+p{
+	font-size: 20px;
+}
+}
+.oNas__text {
+	max-width: 500px;
+
+}
+.oNas__item-right {
+	flex-direction: row-reverse;
+	text-align: right;
+}
 //====================================================================================================
 
 //====================================================================================================
