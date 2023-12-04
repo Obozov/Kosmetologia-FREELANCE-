@@ -16,7 +16,7 @@
 }
 .header__top {
 	display: grid;
-	grid-template: 1fr/40% 20% 15% 25%;
+	grid-template: 1fr/35% 15% 10% 40%;
 }
 .header__time {
 	
@@ -30,8 +30,8 @@ span{
 	align-items: start;
 }
 .header__btn-item {
-	padding: 15px;
-	font-size: 25px;
+	padding: 10px;
+	font-size: 20px;
 	font-weight: bold;
 	background: #fd3b9a;
 	&:hover{
@@ -40,9 +40,7 @@ span{
 }
 .header__contact{
 	display: flex;
-	flex-direction: column;
 	align-items: center;
-	justify-content: space-evenly;
 }
 .header__tel {
 	text-align: center;
@@ -54,8 +52,9 @@ span{
 	}
 }
 .header__logo{
+	position: absolute;
 	img{
-		width: 200px;
+		width: 180px;
 		&:hover{
 			transition: .2s;
 			transform: scale(1.2);
@@ -75,7 +74,7 @@ span{
 	align-items: start;
 	justify-content: space-evenly;
 	img{
-		width: 50px;
+		width: 40px;
 		&:hover{
 			filter: brightness(90%)
 		}

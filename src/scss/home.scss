@@ -24,7 +24,7 @@ button{
 	flex-direction: column;
 }
 .first__title{
-	backdrop-filter: blur(5px);
+	backdrop-filter: blur(1px);
 	line-height: 130%;
 	text-align: center;
 	text-transform: uppercase;
@@ -189,7 +189,7 @@ button{
 }
 .doctors__container {
 	background: #2d6fd167;
-	backdrop-filter: blur(5px)
+	backdrop-filter: blur(1px)
 }
 .doctors__title {
 	padding-top: 20px;
@@ -306,7 +306,7 @@ margin-bottom: 150px;
 	padding-bottom: 300px;
 }
 .usluga__container {
-	backdrop-filter: blur(10px);
+	backdrop-filter: blur(1px);
 
 }
 .usluga__title {
@@ -379,13 +379,14 @@ font-size: 40px;
 	padding-top: 50px;
 }
 .oNas__container {
-	backdrop-filter: blur(5px);
+	backdrop-filter: blur(1px);
 
 }
 .oNas__title {
 padding-bottom: 250px;
 }
 .oNas__block {
+	
 
 }
 .oNas__item {
@@ -408,6 +409,29 @@ p{
 	font-size: 20px;
 }
 }
+@keyframes highlightText {
+	0% { text-shadow: 0 0   5px  #5899fa; }
+	100% { text-shadow: none; }
+ }
+@keyframes highlight {
+	0% { box-shadow: 0 0 10px 10px #5899fa; }
+	100% { box-shadow: none; }
+ }
+._scrolled{
+	h2{
+		animation: highlightText 2s ease-out;
+
+	}
+	p{
+		animation: highlightText 2s ease-out;
+
+	}
+	img{
+		animation: highlight 2s ease-out;
+
+	}
+}
+
 .oNas__text {
 	max-width: 500px;
 
@@ -415,6 +439,10 @@ p{
 .oNas__item-right {
 	flex-direction: row-reverse;
 	text-align: right;
+}
+.oNas__item-hidden{
+	//opacity: 0;
+	//transform: translateX(-144px);
 }
 //====================================================================================================
 

@@ -153,6 +153,10 @@ const config = {
 			"@js": `${paths.src}/js`,
 			"@img": `${paths.src}/img`
 		},
+		fallback: {
+			"console": false
+		}
+
 	},
 }
 export default config;
