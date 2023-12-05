@@ -22,6 +22,45 @@
 	}
 	// .tabs__body
 	&__body {
+		img{
+			height: 500px;
+		}
+		ul{
+			padding-left: 30px;
+		}
+		li{
+			list-style:disc;
+			font-size: 23px;
+			text-transform: capitalize;
+			padding: 5px 0;
+
+		}
 	}
-	
+	@media (max-width:$tablet) {
+		.tabs__navigation {
+			display: flex;
+			flex-direction: column;
+			font-size: 20px;
+		}
+		.tabs__body {
+				img{
+					height: 300px;
+			}
+			li{
+			}
+		}
+	}
+	@media (max-width:$mobile) {
+		.tabs__row{
+			flex-direction: column;
+		}
+		.tabs__body {
+				img{
+					height: 200px;
+			}
+			li{
+			}
+			
+		}
+	}
 }

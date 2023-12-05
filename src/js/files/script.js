@@ -38,7 +38,7 @@ window.addEventListener('scroll', () => {
 		item.style.cssText = `transform:translate(${scrollTo}px,0); `;
 
 	});
-	if (scrollPosition > 1000) {
+	if (scrollPosition > 1154) {
 		items.forEach((e) => {
 			e.classList.add('_scrolled');
 		})

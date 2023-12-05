@@ -20,6 +20,9 @@
 	border-radius: rem(5);
 	padding-right: 15px;
 	position: relative;
+	&:hover{
+		color: #1b437d;
+	}
 	._spoller-init & {
 		cursor: pointer;
 		&::before,
@@ -32,6 +35,9 @@
 			height: 2px;
 			width: 15px;
 			transition: transform 0.5s ease 0s;
+			&:hover{
+				background-color: #1b437d;
+			}
 		}
 		&::before {
 			transform: translate(-75%, -50%) rotate(40deg);

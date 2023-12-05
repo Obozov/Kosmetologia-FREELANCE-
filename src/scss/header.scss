@@ -28,6 +28,7 @@ span{
 .header__btn {
 	display: flex;
 	align-items: start;
+	
 }
 .header__btn-item {
 	padding: 10px;
@@ -54,7 +55,7 @@ span{
 .header__logo{
 	position: absolute;
 	img{
-		width: 180px;
+		width: 350px;
 		&:hover{
 			transition: .2s;
 			transform: scale(1.2);
@@ -100,24 +101,28 @@ span{
 	justify-content: center;
 }
 .menu__link {
+	&:hover{
+		color: #1b437d;
+	}
 }
 
 
 .menu__body {
-	@media (max-width:$mobile) {
+	@media (max-width:$tablet) {
 		padding-top: 10px;
 		height: 100vh;
 		display:none;
 		.header__top{
 			display: flex;
 			flex-direction: column;
-			align-items: start;
-			justify-content: space-between;
+			align-items: center;
+			justify-content: center;
 			.header__logo{
+				position: static;
 				width: 100%;
-				.logo__row1,.logo__row2,.logo__row3{
-					font-size: 30px;
-				}
+			}
+			.header__contact{
+				flex-direction: column;
 			}
 			.header__time{
 				padding: 20px 0;
@@ -127,21 +132,19 @@ span{
 				font-size: 40px;
 				padding-bottom: 20px;
 			}
-			.header__button{
-				width: 320px;
-				padding: 20px;
+			.header__btn{
+				padding: 20px 0;
 				font-size: 30px;
 				font-weight: bold;
 			}
 		}
 		.header__bot{
-			padding-top: 100px;
+			padding-top: 50px;
+			width: 100%;
 		}
 		.menu__list{
 			background: #1b437d;
-			justify-content: space-between;
 			height: 100%;
-			align-items: center;
 			font-size: 30px;
 			display: flex;
 			flex-direction: column;
@@ -154,6 +157,9 @@ span{
 			.spollers__title{
 				font-size: 30px;
 				text-align: center;
+				&:hover{
+					color: #1b437d;
+				}
 			}
 		}
 	}
@@ -171,9 +177,10 @@ span{
 	right: 15px;
 	top: 15px;
 }
+
 .icon-menu {
 	display: none;
-	@media (max-width: $mobile) {
+	@media (max-width: $tablet) {
 		display: block;
 		position: relative;
 		width: rem(40);
@@ -220,4 +227,3 @@ span{
 		}
 	}
 }
-

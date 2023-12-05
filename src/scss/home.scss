@@ -101,7 +101,14 @@ button{
 	left: 10px;
 	bottom: 0px;
 }
-
+@media (max-width:768px) {
+	.first__row{
+		padding-top: 50px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+}
 
 //====================================================================================================
 	.uslugi{
@@ -120,23 +127,19 @@ button{
 	.tabs__navigation {
 		font-size: 25px;
 	}
-	.tabs__title {
-	}
-	._tab-active {
-	}
-	.tabs__content {
-	}
 	.tabs__body {
-		// display: flex;
 		img{
 			height: 500px;
 		}
-		
+		ul{
+			padding-left: 30px;
+		}
 		li{
-			list-style:circle;
+			list-style:disc;
 			font-size: 23px;
 			text-transform: capitalize;
 			padding: 5px 0;
+
 		}
 	}
 	.tabs__row{
@@ -145,6 +148,7 @@ button{
 		align-items: center;
 		justify-content: space-between;
 	}
+
 //====================================================================================================
 .why {
 	background: #fd3b999a;
@@ -182,7 +186,17 @@ button{
 		height: 200px;
 	}
 }
+@media (max-width:$mobile) {
+	.why__row{
+		flex-wrap: wrap;
+		.why__item {
+			padding: 25px;
+			flex: 1 0 50%;
+		}		
 
+	}
+	
+}
 //====================================================================================================
 .doctors {
 	padding: 80px 0;
@@ -205,12 +219,11 @@ button{
 		}
 		font-size: 25px;
 		display: flex;
-		flex-direction: row;
+		
 		justify-content: space-evenly;
 	}
 	.doc__title {
 		flex: 1 0 33%;
-
 		text-transform: uppercase;
 		background: #2d6fd167;
 		border: 3px solid #eeeeee83;
@@ -221,8 +234,6 @@ button{
 		justify-content: space-between;
 		align-items: center;
 		height: 450px;
-		&._tab-active {
-		}
 	}
 	.doc__content {
 		padding: rem(10) rem(15);
@@ -281,6 +292,18 @@ button{
 		width: 150px;
 		height: 150px;
 		transform: rotate(-90deg);
+	}
+}
+@media (max-width:$tablet) {
+	.doc__navigation{
+		flex-direction: column;		
+		.doc__title{
+			img{
+				display: none;
+			}
+
+		}
+
 	}
 }
 //====================================================================================================
@@ -358,8 +381,16 @@ font-size: 40px;
 	display: flex;
 	justify-content: space-evenly;
 	img{
-		max-height: 500px;
+		height: 500px;
 	}
+	.doc1__row{
+		display: flex;
+		flex-direction: column;
+		img{
+			height: 200px;
+		}
+	}
+	
 	.p123{
 		padding-top: 200px;
 		margin-left: -300px;
@@ -372,6 +403,52 @@ font-size: 40px;
 	.k12{
 		margin-left: 10px;
 	}
+}
+@media (max-width:$mobile) {
+		.usluga__title {
+			font-size: 25px;
+			}
+			.usluga__mainBlock{
+				padding: 5px;
+				ol ul li{
+					padding: 0;
+					&:last-child{
+						padding: 0;
+					}
+				 }
+				li{
+					text-align: left;
+					font-size: 20px;
+					padding-bottom: 10px;
+
+				}
+				 
+				ol li{
+					padding: 0;
+					padding-bottom: 10px;
+
+				}
+			}
+			.usluga__doc{
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				
+				.p123{
+					padding: 0;
+					margin: 0;
+				}
+				.m123{
+					padding: 0;
+					margin: 0;
+				}
+				.doc__body{
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+				}
+			}
 }
 //====================================================================================================
 
@@ -440,10 +517,62 @@ p{
 	flex-direction: row-reverse;
 	text-align: right;
 }
-.oNas__item-hidden{
-	//opacity: 0;
-	//transform: translateX(-144px);
+.oNas__subTitle{
+	padding: 100px 0;
+}
+@media (max-width:$mobile){
+	.oNas__item{
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		p{
+			padding: 10px 0;
+		}
+	}
 }
 //====================================================================================================
-
-//====================================================================================================
+.akcii {
+}
+.akcii__container {
+}
+.akcii__title {
+	padding: 50px 0;
+}
+.akcii__cards {
+	padding-bottom: 300px;
+}
+.akcii__row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.akcii__item {
+	border: 5px solid #fd3b9a;
+	background: #fd3b9a;
+	position: relative;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	img{
+		border-radius: 5px;
+		max-height: 170px;
+	}
+	p{
+		font-size: 25px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		max-width: 220px;
+		padding: 5px;
+		span{
+			font-weight: bold;
+		}
+	}
+}
+@media (max-width:$mobile){
+	.akcii__item{
+		img{
+			max-height: 130px;
+		}
+	}
+}

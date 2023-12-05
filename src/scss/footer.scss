@@ -1,29 +1,18 @@
 //====================================================================================================
 .footer{
-	width: 100%;
-	background: #2d6ed1;
-	padding-bottom: 50px;
+	.footer__block{
+		display: flex;
+		justify-content: center;
+		img{
+			backdrop-filter: blur(2px);
+			width: 300px;
+		}
+		
+	}
+	p{
+		text-align: center;
+		padding: 20px 0;
+	}
 }
-.footer__row {
-	padding-top: 25px;
-	display: flex;
-	align-items: start;
 
-	justify-content: space-between;
-}
-.footer__logo {
-	
-}
-.logo__block-footer {
-}
-.logo__row1 {
-}
-.logo__row2 {
-}
-.logo__row3 {
-}
-.footer__tel {
-	font-size: 35px;
-	color: white;
-}
 //====================================================================================================
