@@ -1,5 +1,5 @@
 //====================================================================================================
-.wrapper{
+body{
 	background-image: url("../img/bg.png");
 }
 button{
@@ -8,8 +8,8 @@ button{
 .page{
 	
 }
-.first__container {
-
+.first {
+	margin-top: 100px;
 }
 .first__row{
 	display: flex;
@@ -47,12 +47,12 @@ button{
 }
 
 .first__right {
+	padding-top: 0px;
 	position: relative;
 }
 .first__img {
 	padding-top: 30px;
-	width: 500px;
-
+	height: 400px;
 }
 .links__block{
 	width: 100%;
@@ -66,6 +66,9 @@ button{
 	width: 100%;
 	height: 100%;
 	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 }
 .first__link {
 	background: #2d6ed1;
@@ -80,27 +83,28 @@ button{
 	}
 }
 .first__link1{
-	left: -50px;
-	bottom: 100px;
+	left: 60px;
+	bottom: 200px;
 	
 }
-.first__link2{
-	left: 10px;
-	bottom: 0;
-}
 .first__link3{
-	right: -110px;
-	bottom: 100px;
+	right: 10px;
+	bottom: 240px;
 }
 
 .first__link4{
-	right: 10px;
-	bottom: 0px;
+	right: -100px;
+	bottom: 50px;
 }
 .first__link5{
 	left: 10px;
-	bottom: 0px;
+	bottom: 20px;
 }
+.first__link6{
+	bottom: -85px;
+	left: 25%;
+}
+
 @media (max-width:768px) {
 	.first__row{
 		padding-top: 50px;
@@ -109,7 +113,46 @@ button{
 		justify-content: center;
 	}
 }
+.first__bot {
+	margin-top: 200px;
+	background: #2d6ed1;
+	color: #fff;
+	border-radius: 20px;
+	display: flex;
 
+	justify-content: end;
+	img{
+		border-radius: 20px;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+		height: 100%;
+		@include adaptiveValue('width',650,300)
+	}
+	h2{
+		padding: 15px;
+		font-weight: lighter;
+		position: relative;
+		font-size: 35px;
+		&::after{
+			top: 55%;
+			left: 200px;
+			content: "";
+			position: absolute;
+			width: 70%;
+			height: 2px;
+			background: #fff;
+		}
+	}
+	h3{
+		padding: 15px ;
+		font-size: 30px;
+	}
+	p{
+		padding: 15px;
+		font-size: 20px;
+		padding-bottom: 0;
+	}
+}
 //====================================================================================================
 	.uslugi{
 		padding: 100px 0;
@@ -129,7 +172,7 @@ button{
 	}
 	.tabs__body {
 		img{
-			height: 500px;
+			max-height: 300px;
 		}
 		ul{
 			padding-left: 30px;
