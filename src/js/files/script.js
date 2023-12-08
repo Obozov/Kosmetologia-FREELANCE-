@@ -42,9 +42,44 @@ window.addEventListener('scroll', () => {
 		items.forEach((e) => {
 			e.classList.add('_scrolled');
 		})
-	}else{
+	} else {
 		items.forEach((e) => {
 			e.classList.remove('_scrolled');
 		})
 	}
+});
+
+const TOKEN = "6770059344:AAF7OC3bBx8hvaI72ZpRd-FgGblGZqZPAJw";
+const CHAT_ID = "-1002018859016";
+const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`
+const checkBoxs = document.querySelectorAll('.checkbox');
+
+
+document.getElementById('tg').addEventListener('submit', function (e) {
+	e.preventDefault();
+
+	let messege = `<u>Заявка с сайта</u>\n`;
+	messege += `<b>Имя: </b>${this.name.value}\n`;
+	messege += `<b>Телефон: </b>${this.tel.value}\n`;
+	messege += `<code>Выбранные услуги: </code>\n`
+
+	checkBoxs.forEach(function (e) {
+		if (e.checked) {
+			messege += `<i>  ${e.dataset.value}</i><tg-emoji emoji-id="5368324170671202286">👍</tg-emoji>\n`
+		} else {
+
+		}
+	})
+	axios.post(URI_API, {
+		chat_id: CHAT_ID,
+		parse_mode: 'html',
+		text: messege
+	})
+
+
+
+
+
+
+
 });

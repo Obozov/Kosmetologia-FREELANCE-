@@ -14,22 +14,22 @@
 						<div class="first__left">
 							<h1 class="first__title">медицинский центр<br><span>Косметология и пластическая хирургия</span>
 							</h1>
-							<button type="#" class="first__button">Запись на прием</button>
+							<button type="#" data-popup="#popup" class="first__button">Запись на прием</button>
 						</div>
 						<div class="first__right">
 							<img class="first__img" src="@img/first.png" alt="woman">
 							<div class="links__block">
 								<nav class="links__row">
-									<a data-prlx-mouse data-prlx-dxr  data-prlx-cy="50" data-prlx-cx="20"
-										data-prlx-cy="100" class="first__link first__link1" href="massazhy.html">Массаж</a>
+									<a data-prlx-mouse data-prlx-dxr data-prlx-cy="50" data-prlx-cx="20" data-prlx-cy="100"
+										class="first__link first__link1" href="massazhy.html">Массаж</a>
 									<a data-prlx-mouse data-prlx-dxy data-prlx-a="100" data-prlx-cx="50"
-										class="first__link first__link3" href="hirurgia.html">Капельницы</a>
+										class="first__link first__link3" href="kosmetologia.html">Капельницы</a>
 									<a data-prlx-mouse data-prlx-dxr data-prlx-dxy data-prlx-a="90" ata-prlx-cx="10"
 										ata-prlx-cy="10" class="first__link first__link4"
 										href="kosmetologia.html">Косметология</a>
 									<a data-prlx-mouse data-prlx-cx="30" class="first__link first__link5"
 										href="massazhy.html">Депиляция</a>
-									<a data-prlx-mouse data-prlx-a="50" data-prlx-cx="50" class="first__link first__link6"
+									<a data-prlx-mouse data-prlx-a="10" data-prlx-cx="50" class="first__link first__link6"
 										href="hirurgia.html">Пластическая операция</a>
 								</nav>
 							</div>
@@ -335,8 +335,10 @@
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>
+	@@include('html/_popup.htm',{})
 	@@include('html/_preloader.htm',{})
 	@@include('html/_js.htm',{})
+	<script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 </body>
 
 </html>

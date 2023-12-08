@@ -155,7 +155,7 @@ export let bodyUnlock = (delay = 500) => {
 		bodyLockStatus = false;
 		setTimeout(function () {
 			bodyLockStatus = true;
-		}, delay);
+		}, delay); 
 	}
 }
 export let bodyLock = (delay = 500) => {

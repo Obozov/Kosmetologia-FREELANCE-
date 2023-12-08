@@ -1,10 +1,84 @@
 <div id="popup" aria-hidden="true" class="popup">
 	<div class="popup__wrapper">
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрити</button>
 			<div class="popup__text">
-				Text
+				<form id="tg">
+					<div class="form-group">
+						<label class="form-label">Имя*</label>
+						<input type="text" name="name" class="form-control">
+					</div>
+					<div class="form-group">
+						<label class="form-label">Телефон*</label>
+						<input type="tel" name="tel" class="form-control">
+					</div> 
+					<div class="form-group">
+						<label class="form-label">Почта <span><br>(не обязательно)</span></label>
+						<input type="email" name="email" class="form-control">
+					</div>
+					<div data-tabs class="tg">
+						<p>Выберите услугу:</p>
+						<nav data-tabs-titles class="tg__navigation">
+							<button type="button" class="tg__title _tab-active">Косметология</button>
+							<button type="button" class="tg__title">Пластическая хирургия</button>
+							<button type="button" class="tg__title">Массаж/депиляция</button>
+						</nav>
+						<div data-tabs-body class="tg__content">
+							<div class="tg__body">
+								<label> 
+									<input type="checkbox" class="checkbox" data-value="Капельница" name="Kapelnica">
+									Капельницы
+								</label>
+								<label>
+									<input type="checkbox" class="checkbox" data-value="Konturnaya_plastika"
+										name="Konturnaya_plastika">
+									Контурная пластика
+								</label>
+								<label>
+									<input type="checkbox" class="checkbox" data-value="Uvelichenije_gub"
+										name="Uvelichenije_gub">
+									Увеличение губ
+								</label>
+
+							</div>
+							<div class="tg__body">
+								<label>
+									<input type="checkbox" class="checkbox" data-value="Булхорн" name="Bulhorn">
+									Булхорн </label>
+								<label>
+									<input type="checkbox" class="checkbox" data-value="Otoplastika" name="Otoplastika">
+									Отопластика </label>
+								<label>
+									<input type="checkbox" class="checkbox" data-value="Onkoderm" name="Onkoderm">
+									Онкодерматология </label>
+							</div>
+							<div class="tg__body">
+
+								<select name="form[]" data-class-modif="form">
+									<option value="1" selected>Пункт №1</option>
+									<option value="2">Пункт №2</option>
+									<option value="3">Пункт №3</option>
+									<option value="4">Пункт №4</option>
+								</select>
+								<!-- <label>
+									<input type="checkbox" class="checkbox" data-value="Anticelulit" name="Anticelulit">
+									Антицеллюлитный массаж
+								</label>
+								<label>
+									<input type="checkbox" class="checkbox" data-value="Lipoliz" name="Lipoliz">
+									Микроволновой липолиз
+								</label>
+								<label>
+									<input type="checkbox" class="checkbox" data-value="Limfodrenazhny" name="Limfodrenazhny">
+									Лимфодренажный массаж
+								</label> -->
+							</div>
+						</div>
+					</div>
+					<button type="submit" class="btn ">Отправить</button>
+				</form>
 			</div>
+			<button data-close type="button" class="popup__close">Закрить</button>
+
 		</div>
 	</div>
 </div>
