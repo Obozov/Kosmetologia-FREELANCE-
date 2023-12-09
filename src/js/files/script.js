@@ -55,31 +55,36 @@ const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`
 const checkBoxs = document.querySelectorAll('.checkbox');
 
 
-document.getElementById('tg').addEventListener('submit', function (e) {
-	e.preventDefault();
+const tg = document.getElementById('tg');
+if (tg) {
+	tg.addEventListener('submit', function (e) {
+		e.preventDefault();
 
-	let messege = `<u>Заявка с сайта</u>\n`;
-	messege += `<b>Имя: </b>${this.name.value}\n`;
-	messege += `<b>Телефон: </b>${this.tel.value}\n`;
-	messege += `<code>Выбранные услуги: </code>\n`
+		let messege = `<u>Заявка с сайта</u>\n`;
+		messege += `<b>Имя: </b>${this.name.value}\n`;
+		messege += `<b>Телефон: </b>${this.tel.value}\n`;
+		messege += `<b>Почта: </b>${this.email.value}\n`;
+		messege += `<code>Выбранные услуги: </code>\n`;
 
-	checkBoxs.forEach(function (e) {
-		if (e.checked) {
-			messege += `<i>  ${e.dataset.value}</i><tg-emoji emoji-id="5368324170671202286">👍</tg-emoji>\n`
-		} else {
+		checkBoxs.forEach(function (e) {
+			if (e.checked) {
+				messege += `<i>  ${e.dataset.value}</i><tg-emoji emoji-id="5368324170671202286">👍</tg-emoji>\n`
+			} else {
 
+			}
+		})
+		if (this.name.value && this.tel.value) {
+			axios.post(URI_API, {
+				chat_id: CHAT_ID,
+				parse_mode: 'html',
+				text: messege
+			})
+		}else{
+			alert('Заполните телефон и имя!')
 		}
-	})
-	axios.post(URI_API, {
-		chat_id: CHAT_ID,
-		parse_mode: 'html',
-		text: messege
-	})
 
 
+	});
+} else {
 
-
-
-
-
-});
+}
