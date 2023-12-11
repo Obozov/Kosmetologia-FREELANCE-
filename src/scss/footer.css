@@ -1,0 +1,13 @@
+.footer .footer__block {
+  display: flex;
+  justify-content: center;
+}
+.footer .footer__block img {
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  width: 300px;
+}
+.footer p {
+  text-align: center;
+  padding: 20px 0;
+}/*# sourceMappingURL=footer.css.map */
